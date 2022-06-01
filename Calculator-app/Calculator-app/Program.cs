@@ -6,7 +6,7 @@ namespace Calculator_app
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Give money please");
         }
     }
 }

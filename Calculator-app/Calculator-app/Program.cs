@@ -11,6 +11,8 @@ namespace Calculator_app
 
             string num1Str = Console.ReadLine();
             bool parseRes1 = Int32.TryParse(num1Str, out int num1);
+
+            Console.WriteLine("Give money please");
         }
 
         void PrintMessage()

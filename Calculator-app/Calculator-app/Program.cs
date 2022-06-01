@@ -8,5 +8,10 @@ namespace Calculator_app
         {
 
         }
+
+        void PrintMessage()
+        {
+            Console.WriteLine("Hello");
+        }
     }
 }

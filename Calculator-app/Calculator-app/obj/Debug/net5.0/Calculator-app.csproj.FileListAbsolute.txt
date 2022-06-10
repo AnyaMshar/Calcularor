@@ -1,0 +1,16 @@
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\bin\Debug\net5.0\Calculator-app.exe
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\bin\Debug\net5.0\Calculator-app.deps.json
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\bin\Debug\net5.0\Calculator-app.runtimeconfig.json
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\bin\Debug\net5.0\Calculator-app.runtimeconfig.dev.json
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\bin\Debug\net5.0\Calculator-app.dll
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\bin\Debug\net5.0\ref\Calculator-app.dll
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\bin\Debug\net5.0\Calculator-app.pdb
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.csproj.AssemblyReference.cache
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.AssemblyInfoInputs.cache
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.AssemblyInfo.cs
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.csproj.CoreCompileInputs.cache
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.dll
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\ref\Calculator-app.dll
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.pdb
+C:\Users\Anna\source\git\Calcularor\Calculator-app\Calculator-app\obj\Debug\net5.0\Calculator-app.genruntimeconfig.cache

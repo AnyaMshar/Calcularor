@@ -128,5 +128,10 @@ namespace Calculator_app
                 return -1;
             }
         }
+
+        public static void Hello()
+        {
+            Console.WriteLine("Hello. Write your name");
+        }
     }
 }

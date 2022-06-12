@@ -6,6 +6,7 @@ namespace Calculator_app
     {
         static void Main(string[] args)
         {
+            Hello();
             Menu();
 
             var res1 = EnterNumber();
@@ -36,11 +37,27 @@ namespace Calculator_app
                                 Mult(num1, num2);
                                 break;
                             case 4:
-                                Dev(num1, num2);
-                                break;
+                                if (num2 == 0)
+                                {
+                                    DivByZero();
+                                    break;
+                                }
+                                else
+                                {
+                                    Div(num1, num2);
+                                    break;
+                                } 
                             case 5:
-                                Ost(num1, num2);
-                                break;
+                                if (num2 == 0)
+                                {
+                                    DivByZero();
+                                    break;
+                                }
+                                else
+                                {
+                                    Rem(num1, num2);
+                                    break;
+                                }
                             default:
                                 Kiss();
                                 break;
@@ -60,6 +77,7 @@ namespace Calculator_app
         
         public static void Menu()
         {
+            Console.WriteLine("Select arithmetic operation.");
             Console.WriteLine("Press 1 - Sum");
             Console.WriteLine("Press 2 - Dif");
             Console.WriteLine("Press 3 - Mult");
@@ -68,39 +86,39 @@ namespace Calculator_app
             Console.WriteLine("Press 6 - Kiss");
         }
         
-        public static void Sum(int a, int b)
+        public static void Sum(decimal a, decimal b)
         {
-            int result = a + b;
+            decimal result = a + b;
             
             Console.WriteLine($"Sum = {result}");
         }
         
-        public static void Dif(int a, int b)
+        public static void Dif(decimal a, decimal b)
         {
-            int result = a - b;
+            decimal result = a - b;
             
-            Console.WriteLine($"Разность чисел = {result}"); ;
+            Console.WriteLine($"Difference = {result}"); ;
         }
         
-        public static void Mult(int a, int b)
+        public static void Mult(decimal a, decimal b)
         {
-            int result = a * b;
+            decimal result = a * b;
             
-            Console.WriteLine($"Произведение чисел = {result}");
+            Console.WriteLine($"Product = {result}");
         }
         
-        public static void Dev(int a, int b)
+        public static void Div(decimal a, decimal b)
         {
-            int result = a / b;
+            decimal result = a / b;
             
-            Console.WriteLine($"Частно чисел = {result}");
+            Console.WriteLine($"Quotient = {result}");
         }
         
-        public static void Ost(int a, int b)
+        public static void Rem(decimal a, decimal b)
         {
-            int result = a % b;
+            decimal result = a % b;
             
-            Console.WriteLine($"Остаток от деления = {result}");
+            Console.WriteLine($"Remainder of division = {result}");
         }
 
         public static void Kiss()
@@ -113,6 +131,11 @@ namespace Calculator_app
             Console.WriteLine("Error");
         }
 
+        public static void DivByZero()
+        {
+            Console.WriteLine("Error. Dividing by zero is disallowed.");
+        }
+        
         public static int EnterNumber()
         {
             string enter = Console.ReadLine();
@@ -131,7 +154,11 @@ namespace Calculator_app
 
         public static void Hello()
         {
-            Console.WriteLine("Hello. Write your name");
+            Console.WriteLine("Hello. Write your name.");
+            
+            string name = Console.ReadLine();
+
+            Console.WriteLine($"Welcome to the Calculator, {name}.");
         }
     }
 }

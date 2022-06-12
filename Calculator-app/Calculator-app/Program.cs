@@ -120,7 +120,7 @@ namespace Calculator_app
             Console.WriteLine("Press 2 - Dif");
             Console.WriteLine("Press 3 - Mult");
             Console.WriteLine("Press 4 - Dev");
-            Console.WriteLine("Press 5 - Ost");
+            Console.WriteLine("Press 5 - Rem");
             Console.WriteLine("Press 6 - Kiss");
             Console.ResetColor();
             Console.WriteLine();
@@ -166,22 +166,36 @@ namespace Calculator_app
         
         public static void Div(decimal a, decimal b)
         {
-            decimal result = a / b;
+            if (b == 0)
+            {
+                DivByZero();
+            }
+            else
+            {
+                decimal result = a / b;
 
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine($"Quotient = {result}");
-            Console.ResetColor();
-            Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine($"Quotient = {result}");
+                Console.ResetColor();
+                Console.WriteLine();
+            } 
         }
         
         public static void Rem(decimal a, decimal b)
         {
-            decimal result = a % b;
+            if (b == 0)
+            {
+                DivByZero();
+            }
+            else
+            {
+                decimal result = a % b;
 
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine($"Remainder of division = {result}");
-            Console.ResetColor();
-            Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine($"Remainder of division = {result}");
+                Console.ResetColor();
+                Console.WriteLine();
+            }
         }
 
         public static void Kiss()

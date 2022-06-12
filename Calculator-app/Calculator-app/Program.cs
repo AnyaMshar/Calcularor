@@ -18,15 +18,13 @@ namespace Calculator_app
 
                 if (res1 != -1)
                 {
-                    Console.WriteLine("Enter number 1:");
-                    Console.WriteLine();
+                    Console.Write("Enter number 1: ");
 
                     var num1 = EnterNumber();
 
                     if (num1 != -1)
                     {
-                        Console.WriteLine("Enter number 2:");
-                        Console.WriteLine();
+                        Console.Write("Enter number 2: ");
 
                         var num2 = EnterNumber();
 
@@ -81,32 +79,36 @@ namespace Calculator_app
                     Mistake("Error. enter a number.");
                 }
 
+                int counter = 0;
+
                 while (true)
-                {
+                {  
                     Next();
 
-                    string enter = Console.ReadLine();
-                    bool con1 = int.TryParse(enter, out int res);
+                    var con1 = EnterNumber();
 
-                    if (con1)
+                    if (con1 == 0)
                     {
-                        if (res == 0)
-                        {
-                            GoodBye(name);
-                            Environment.Exit(0);
-                        }
-                        else if (res == 1)
-                        {
-                            break;
-                        }
-                        else 
-                        {
-                            Mistake("Error. Please, try again.");
-                        }
+                        GoodBye(name);
+                    }
+                    else if (con1 == 1)
+                    {
+                        break;
                     }
                     else
                     {
-                        Mistake("Error. Please, enter a suggested number");
+                        counter++;
+
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine($"You have {3 - counter} attempts.");
+                        Console.WriteLine();
+                        Console.ResetColor();
+                        
+                        if (counter == 3)
+                        {
+                            Mistake("You used 3 attempts for entry.");
+                            GoodBye(name);
+                        }
                     }
                 }
             }
@@ -221,8 +223,11 @@ namespace Calculator_app
         
         public static int EnterNumber()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             string enter = Console.ReadLine();
             Console.WriteLine();
+            Console.ResetColor();
+            
             bool con = int.TryParse(enter, out int result);
             
             if (con)
@@ -231,7 +236,7 @@ namespace Calculator_app
             }
             else
             {
-                Mistake("Error.");
+                Mistake("Error. You have to enter a number.");
                 
                 return -1;
             }
@@ -240,11 +245,11 @@ namespace Calculator_app
         public static string Hello()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Hello. Write your name.");
+            Console.Write("Hello. Write your name: ");
             Console.ResetColor();
-            Console.WriteLine();
 
             string name = Console.ReadLine();
+            Console.WriteLine();
 
             return name;
         }
@@ -257,8 +262,12 @@ namespace Calculator_app
 
         public static void GoodBye(string name)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"Good bye, {name}.");
             Console.WriteLine();
+            Console.ResetColor();
+
+            Environment.Exit(0);
         }
     }
 }
